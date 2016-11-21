@@ -1,5 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+foreach ($list as $key=>$value) {
+	$t = time();
+	$data[$t][] = $value;
+}
+
+$datares = array();
+foreach($data as $k=> $v) {
+	$info = array();
+	$info['month'] = $k;
+	$info['content'] = $v;
+	$datares[] = $info;
+}
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,22 +82,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	<embed width="640" height="360" allownetworking="all" allowscriptaccess="always" src="https://staticlive.douyucdn.cn/common/share/play.swf?room_id=965332" quality="high" bgcolor="#000" wmode="window" allowfullscreen="true" allowFullScreenInteractive="true" type="application/x-shockwave-flash">
 </div>
+
+
 
 </body>
 </html>
